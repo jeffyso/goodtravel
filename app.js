@@ -81,14 +81,14 @@ function sendText (sender, text) {
                   }
               ]
             }
+          },
+          {
+            "type": "location",
+            "title": "ลำปาง",
+            "address": "เทศบาลนครลำปาง อำเภอเมืองลำปาง ลำปาง 52100",
+            "latitude": 18.283815,
+            "longitude": 99.493267
           }
-        //   {
-        //     "type": "location",
-        //     "title": "ลำปาง",
-        //     "address": "เทศบาลนครลำปาง อำเภอเมืองลำปาง ลำปาง 52100",
-        //     "latitude": 18.283815,
-        //     "longitude": 99.493267
-        //   }
           
     ]
   }
