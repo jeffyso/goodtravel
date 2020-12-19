@@ -135,8 +135,6 @@ function sendText (sender, text) {
     if (body) console.log(body)
   })
 }
-
-
 function sendDetail (sender, text) {
 
 
@@ -213,7 +211,7 @@ function sendDetail (sender, text) {
       if (res) console.log('success')
       if (body) console.log(body)
     })
-  }
+}
 app.listen(app.get('port'), function () {
   console.log('run at port', app.get('port'))
 })
