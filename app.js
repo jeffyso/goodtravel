@@ -54,6 +54,28 @@ function sendText (sender, text) {
                         "text": "Action 1"
                       }
                     ]
+                  },
+                  {
+                    "title": "Title",
+                    "text": "Text",
+                    "actions": [
+                      {
+                        "type": "message",
+                        "label": "Action 1",
+                        "text": "Action 1"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Title",
+                    "text": "Text",
+                    "actions": [
+                      {
+                        "type": "message",
+                        "label": "Action 1",
+                        "text": "Action 1"
+                      }
+                    ]
                   }
               ]
             }
