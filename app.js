@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 app.post('/webhook', (req, res) => {
-  let template =req.body.events[0].template
+    let template =  
   let text = req.body.events[0].message.text
   let sender = req.body.events[0].source.userId
   let replyToken = req.body.events[0].replyToken
@@ -18,78 +18,20 @@ app.post('/webhook', (req, res) => {
   console.log(typeof sender, typeof text)
   // console.log(req.body.events[0])
   if (text === 'สนใจ') {
-    sendText(sender, text,template)
+    sendText(sender, text)
 
   }
   res.sendStatus(200)
 })
 
-function sendText (sender, template) {
+function sendText (sender, text) {
   let data = {
     to: sender,
     messages: [
       {
-        type: template,
-        "altText": "this is a carousel template",
-        "template": {
-          "type": "carousel",
-          "imageSize": "cover",
-          "imageAspectRatio": "square",
-          "columns": [
-            {
-              "title": "1",
-              "text": "Text",
-              "actions": [
-                {
-                  "type": "message",
-                  "label": "View",
-                  "text": "View"
-                }
-              ],
-              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
-              "imageBackgroundColor": "#E50000"
-            },
-            {
-              "title": "2",
-              "text": "Text",
-              "actions": [
-                {
-                  "type": "message",
-                  "label": "View",
-                  "text": "View"
-                }
-              ],
-              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
-              "imageBackgroundColor": "#137CF7"
-            },
-            {
-              "title": "3",
-              "text": "Text",
-              "actions": [
-                {
-                  "type": "message",
-                  "label": "View",
-                  "text": "View"
-                }
-              ],
-              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
-              "imageBackgroundColor": "#10D228"
-            },
-            {
-              "title": "4",
-              "text": "Text",
-              "actions": [
-                {
-                  "type": "message",
-                  "label": "View",
-                  "text": "View"
-                }
-              ],
-              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
-              "imageBackgroundColor": "#DB2020"
-            }
-          ]
-        }
+            "type": "sticker",
+            "packageId": "11537",
+            "stickerId": "52002735"
       }
     ]
   }
