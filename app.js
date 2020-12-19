@@ -82,10 +82,10 @@ function sendText (sender, text) {
             //     }
             //   ]
             // },
-            "footer": {
-              "type": "box",
-              "layout": "vertical",
-              "spacing": "sm",
+            // "footer": {
+            //   "type": "box",
+            //   "layout": "vertical",
+            //   "spacing": "sm",
               "contents": [
                 {
                   "type": "button",
@@ -122,7 +122,7 @@ function sendText (sender, text) {
                   "style": "primary"
                 }
               ]
-            }
+            // }
           }
     ]
   }
