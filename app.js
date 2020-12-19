@@ -103,8 +103,8 @@ function sendText (sender, text) {
                     {
                       "type": "postback",
                       "label": "รายละเอียด",
-                      "text": "รายละเอียด",
-                      "data": "ksdf;lksnflknsdlfknasldfknldskfasl;dfkn"
+                      "text": "น่ารักจุง",
+                      "data": "data"
                     }
                   ],
                   "imageBackgroundColor": "#FFFFFF"
