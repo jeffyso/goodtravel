@@ -65,8 +65,8 @@ function sendText (sender, text) {
                   "size": "full",
                   "aspectRatio": "20:13",
                   "aspectMode": "cover",
-                  "backgroundColor": "#FFFFFFFF",
-                
+                  "backgroundColor": "#FFFFFFFF"
+                },
             "type": "template",
             "altText": "this is a carousel template",
             "template": {
