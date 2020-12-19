@@ -55,47 +55,47 @@ function sendText (sender, text) {
     to: sender,
     messages: [
         {
-            // "type": "bubble",
-            // "direction": "ltr",
-            // "hero": {
-            //   "type": "image",
-            //   "url": "https://sv1.picz.in.th/images/2020/12/20/jrMAKf.jpg",
-            //   "align": "start",
-            //   "size": "full",
-            //   "aspectRatio": "20:13",
-            //   "aspectMode": "cover",
-            //   "backgroundColor": "#FFFFFFFF"
-            // },
-            // "body": {
-            //   "type": "box",
-            //   "layout": "vertical",
-            //   "spacing": "sm",
-            //   "contents": [
-            //     {
-            //       "type": "text",
-            //       "text": "กดเพื่อเลือกที่คุณสนใจ",
-            //       "weight": "bold",
-            //       "size": "xl",
-            //       "color": "#D8AAAAFF",
-            //       "wrap": true,
-            //       "contents": []
-            //     }
-            //   ]
-            // },
-            // "footer": {
-            //   "type": "box",
-            //   "layout": "vertical",
-            //   "spacing": "sm",
-            //   "contents": [
+            "type": "bubble",
+            "direction": "ltr",
+            "hero": {
+              "type": "image",
+              "url": "https://sv1.picz.in.th/images/2020/12/20/jrMAKf.jpg",
+              "align": "start",
+              "size": "full",
+              "aspectRatio": "20:13",
+              "aspectMode": "cover",
+              "backgroundColor": "#FFFFFFFF"
+            },
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "กดเพื่อเลือกที่คุณสนใจ",
+                  "weight": "bold",
+                  "size": "xl",
+                  "color": "#D8AAAAFF",
+                  "wrap": true,
+                  "contents": []
+                }
+              ]
+            },
+            "footer": {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "sm",
+              "contents": [
                 {
                   "type": "button",
                   "action": {
                     "type": "message",
                     "label": "สถานที่ท่องเที่ยว",
-                    "text": "เที่ยวไหนดี"
+                    "text": "สถานที่ท่องเที่ยว"
                   },
                   "flex": 2,
-                  "color": "#9AD6D2FF",
+                  "color": "#41B9B0FF",
                   "margin": "xl",
                   "style": "primary"
                 },
@@ -104,9 +104,9 @@ function sendText (sender, text) {
                   "action": {
                     "type": "message",
                     "label": "ร้านอาหาร",
-                    "text": "ร้านไหนเด็ด"
+                    "text": "ร้านอาหาร"
                   },
-                  "color": "#9AD6D2FF",
+                  "color": "#41B9B0FF",
                   "margin": "xl",
                   "style": "primary"
                 },
@@ -115,14 +115,14 @@ function sendText (sender, text) {
                   "action": {
                     "type": "message",
                     "label": "โรงแรม, ที่พัก",
-                    "text": "ที่พักสบาย"
+                    "text": "โรงแรม, ที่พัก"
                   },
-                  "color": "#9AD6D2FF",
+                  "color": "#41B9B0FF",
                   "margin": "xl",
                   "style": "primary"
                 }
-            //   ]
-            // }
+              ]
+            }
           }
     ]
   }
