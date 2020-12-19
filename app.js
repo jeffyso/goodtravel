@@ -17,9 +17,9 @@ app.post('/webhook', (req, res) => {
   if (text === 'สนใจ') {
     sendText(sender, text)
   }
-  else if(text === 'น่ารักจุง'){
-    sendDetail(sender,text)
-  }
+//   else if(text === 'น่ารักจุง'){
+//     sendDetail(sender,text)
+//   }
 })
 function sendText (sender, text) { 
 
