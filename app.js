@@ -22,22 +22,69 @@ function reply(reply_token, msg) {
         'Authorization': 'Bearer {gWY1qEsFDFXlNuG/aHbMdmDdM6SmZpsBaViQHTXvzxo/W70C+fQZsAhCeAMn39mN5H2tx8+6qLrVKoluYmktK/H8Ug9Mn8EooFIvi4NwUE/eg6ihvOl5rzIuMfFleKWAiAddjSN1s6FSKFeZfGXwTQdB04t89/1O/w1cDnyilFU=}'
     }
     let body = JSON.stringify({
-        replyToken: reply_token,
-        messages: [{
-<<<<<<< HEAD
-            "type": "sticker",
-            "packageId": "11537",
-            "stickerId": "52002735"
-=======
-            type: 'text',
-            text: '5555565'
-        },
-        {
-            type: 'text',
-            text: 'How are you?'
->>>>>>> 14066d6607e17fad94f4c64dc03b746fe1707113
-        }]
-    })
+        "type": "template",
+        "altText": "this is a carousel template",
+        "template": {
+          "type": "carousel",
+          "imageSize": "cover",
+          "imageAspectRatio": "square",
+          "columns": [
+            {
+              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
+              "title": "1",
+              "text": "Text",
+              "actions": [
+                {
+                  "type": "message",
+                  "label": "View",
+                  "text": "View"
+                }
+              ],
+              "imageBackgroundColor": "#E50000"
+            },
+            {
+              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
+              "title": "2",
+              "text": "Text",
+              "actions": [
+                {
+                  "type": "message",
+                  "label": "View",
+                  "text": "View"
+                }
+              ],
+              "imageBackgroundColor": "#137CF7"
+            },
+            {
+              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
+              "title": "3",
+              "text": "Text",
+              "actions": [
+                {
+                  "type": "message",
+                  "label": "View",
+                  "text": "View"
+                }
+              ],
+              "imageBackgroundColor": "#10D228"
+            },
+            {
+              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
+              "title": "4",
+              "text": "Text",
+              "actions": [
+                {
+                  "type": "message",
+                  "label": "View",
+                  "text": "View"
+                }
+              ],
+              "imageBackgroundColor": "#DB2020"
+            }
+          ]
+        }
+      })
+    
     
     request.post({
         url: 'https://api.line.me/v2/bot/message/reply',
