@@ -12,8 +12,7 @@ app.post('/webhook', (req, res) => {
   let text = req.body.events[0].message.text
   let sender = req.body.events[0].source.userId
   let replyToken = req.body.events[0].replyToken
-  const message = "ตอนนี้คุณอยู่ในจังหวัดลำปาง"
-  res.message
+  res.send('ตอนนี้คุณอยู่ในจังหวัดลำปาง')
   console.log(text, sender, replyToken)
   console.log(typeof sender, typeof text)
   // console.log(req.body.events[0])
