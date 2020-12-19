@@ -102,25 +102,9 @@ function sendText (sender, text) {
                   "actions": [
                     {
                       "type": "postback",
-                      "label": "รายละเอียด",
+                      "label": "ไม่ไอสัส",
                       "text": "น่ารักจุง",
                       "data": "data"
-                    }
-                  ],
-                  "imageBackgroundColor": "#FFFFFF"
-                }
-              ],
-              "columns": [
-                {
-                  "thumbnailImageUrl": "https://t3.gstatic.com/images?q=tbn:ANd9GcQ9HjTYO4Dzwf51uB65RIZ1jhy1PytLWRxeFLf19XvWdg_nwiuZsq1kT4FEFIRgh_1znFzXSijwTX2WrYRH2x_Ugw",
-                  "title": "วัดพระธาตุลำปางหลวง",
-                  "text": "Text",
-                  "actions": [
-                    {
-                      "type": "postback",
-                      "label": "รายละเอียด",
-                      "text": "รายละเอียด",
-                      "data": "ksdasdsad16516584614861knasldfknldskfasl;dfkn"
                     }
                   ],
                   "imageBackgroundColor": "#FFFFFF"
