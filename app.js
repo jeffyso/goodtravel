@@ -24,9 +24,18 @@ function reply(reply_token, msg) {
     let body = JSON.stringify({
         replyToken: reply_token,
         messages: [{
+<<<<<<< HEAD
             "type": "sticker",
             "packageId": "11537",
             "stickerId": "52002735"
+=======
+            type: 'text',
+            text: '5555565'
+        },
+        {
+            type: 'text',
+            text: 'How are you?'
+>>>>>>> 14066d6607e17fad94f4c64dc03b746fe1707113
         }]
     })
     
