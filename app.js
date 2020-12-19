@@ -18,8 +18,8 @@ app.post('/webhook', (req, res) => {
   if (text === 'สนใจ') {
     sendText(sender, text)
   }
+  res.sendStatus(200)
 })
-
 
 function sendText (sender, text) {
 
@@ -103,6 +103,7 @@ function sendText (sender, text) {
                       "type": "postback",
                       "label": "กดเพื่อดูรายละเอียด",
                       "text": "น่ารักจุง",
+                      "data": "data"
                     }
                   ],
                   "imageBackgroundColor": "#FFFFFF"
