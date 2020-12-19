@@ -10,7 +10,6 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 app.post('/webhook', (req, res) => {
-    let template =  
   let text = req.body.events[0].message.text
   let sender = req.body.events[0].source.userId
   let replyToken = req.body.events[0].replyToken
