@@ -2,8 +2,6 @@ let express = require('express')
 let bodyParser = require('body-parser')
 let request = require('request')
 let app = express()
-let CronJob = require('cron').CronJob;
-let country = {A:ลำปาง,B:เชียงใหม่,C:เชียงราย} 
 app.use(bodyParser.json())
 
 app.set('port', (process.env.PORT || 4000))
@@ -22,7 +20,6 @@ app.post('/webhook', (req, res) => {
     sendText(sender, text)
   }
   res.sendStatus(200)
-
   
 })
 
@@ -84,14 +81,14 @@ function sendText (sender, text) {
                   }
               ]
             }
-          },
-          {
-            "type": "location",
-            "title": "ลำปาง",
-            "address": "เทศบาลนครลำปาง อำเภอเมืองลำปาง ลำปาง 52100",
-            "latitude": 18.283815,
-            "longitude": 99.493267
           }
+        //   {
+        //     "type": "location",
+        //     "title": "ลำปาง",
+        //     "address": "เทศบาลนครลำปาง อำเภอเมืองลำปาง ลำปาง 52100",
+        //     "latitude": 18.283815,
+        //     "longitude": 99.493267
+        //   }
           
     ]
   }
