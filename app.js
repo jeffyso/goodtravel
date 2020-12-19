@@ -41,12 +41,34 @@ function sendText (sender, text) {
                       "type": "message",
                       "label": "Action 1",
                       "text": "Action 1"
+                    },
+                    {
+                      "type": "message",
+                      "label": "Action 2",
+                      "text": "Action 2"
+                    }
+                  ]
+                },
+                {
+                  "title": "Title",
+                  "text": "Text",
+                  "actions": [
+                    {
+                      "type": "message",
+                      "label": "Action 1",
+                      "text": "Action 1"
+                    },
+                    {
+                      "type": "message",
+                      "label": "Action 2",
+                      "text": "Action 2"
                     }
                   ]
                 }
               ]
             }
           }
+          
     ]
   }
   request({
