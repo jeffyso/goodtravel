@@ -15,19 +15,17 @@ app.post('/webhook', (req, res) => {
   if (text === 'สนใจ') {
     sendText(sender, text)
   }
-
   if (text === 'เที่ยวไหนดี'){
     sendTravel(sender,text)
   }
   if (text === 'ร้านไหนเด็ด'){
     sendRestaurant(sender,text)
   }
-  if (text === 'ที่พักสบาย'){
+  if (text === 'ที่พักสบายๆ'){
     sendHotel(sender,text)
   }
   res.sendStatus(200)
 })
-
 function sendText (sender, text) {
 
 
