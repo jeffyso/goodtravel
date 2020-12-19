@@ -88,6 +88,27 @@ function sendText (sender, text) {
             "address": "เทศบาลนครลำปาง อำเภอเมืองลำปาง ลำปาง 52100",
             "latitude": 18.283815,
             "longitude": 99.493267
+          },
+          {
+            "type": "imagemap",
+            "baseUrl": "https://drive.google.com/file/d/1RYzLuwe6NixDiaHBixkSRwI8v8bq2ogD/view?usp=sharing",
+            "altText": "This is an imagemap",
+            "baseSize": {
+              "width": 1040,
+              "height": 791
+            },
+            "actions": [
+              {
+                "type": "message",
+                "area": {
+                  "x": 122,
+                  "y": 80,
+                  "width": 845,
+                  "height": 628
+                },
+                "text": "Action 1"
+              }
+            ]
           }
           
     ]
