@@ -55,33 +55,33 @@ function sendText (sender, text) {
     to: sender,
     messages: [
         {
-            "type": "bubble",
-            "direction": "ltr",
-            "hero": {
-              "type": "image",
-              "url": "https://sv1.picz.in.th/images/2020/12/20/jrMAKf.jpg",
-              "align": "start",
-              "size": "full",
-              "aspectRatio": "20:13",
-              "aspectMode": "cover",
-              "backgroundColor": "#FFFFFFFF"
-            },
-            "body": {
-              "type": "box",
-              "layout": "vertical",
-              "spacing": "sm",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "กดเพื่อเลือกที่คุณสนใจ",
-                  "weight": "bold",
-                  "size": "xl",
-                  "color": "#D8AAAAFF",
-                  "wrap": true,
-                  "contents": []
-                }
-              ]
-            },
+            // "type": "bubble",
+            // "direction": "ltr",
+            // "hero": {
+            //   "type": "image",
+            //   "url": "https://sv1.picz.in.th/images/2020/12/20/jrMAKf.jpg",
+            //   "align": "start",
+            //   "size": "full",
+            //   "aspectRatio": "20:13",
+            //   "aspectMode": "cover",
+            //   "backgroundColor": "#FFFFFFFF"
+            // },
+            // "body": {
+            //   "type": "box",
+            //   "layout": "vertical",
+            //   "spacing": "sm",
+            //   "contents": [
+            //     {
+            //       "type": "text",
+            //       "text": "กดเพื่อเลือกที่คุณสนใจ",
+            //       "weight": "bold",
+            //       "size": "xl",
+            //       "color": "#D8AAAAFF",
+            //       "wrap": true,
+            //       "contents": []
+            //     }
+            //   ]
+            // },
             "footer": {
               "type": "box",
               "layout": "vertical",
