@@ -2,6 +2,27 @@ let express = require('express')
 let bodyParser = require('body-parser')
 let request = require('request')
 let app = express()
+
+
+const functions = require("firebase-functions");
+const request = require("request-promise");
+
+const LINE_MESSAGING_API = "https://api.line.me/v2/bot/message";
+const LINE_HEADER = {
+  "Content-Type": "application/json",
+  "Authorization": "Bearer <gWY1qEsFDFXlNuG/aHbMdmDdM6SmZpsBaViQHTXvzxo/W70C+fQZsAhCeAMn39mN5H2tx8+6qLrVKoluYmktK/H8Ug9Mn8EooFIvi4NwUE/eg6ihvOl5rzIuMfFleKWAiAddjSN1s6FSKFeZfGXwTQdB04t89/1O/w1cDnyilFU=>"
+};
+
+// exports.AdvanceMessage = functions.https.onRequest((req, res) => {
+//     return request({
+//         method: "POST",
+//         uri: `${LINE_MESSAGING_API}/push`,
+//         headers: LINE_HEADER,
+//         body: JSON.stringify({
+//           to: "<USER-ID>",
+//           messages: [ ]
+// })
+
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 4000))
 app.use(bodyParser.urlencoded({extended: true}))
@@ -33,30 +54,71 @@ function sendText (sender, text) {
     to: sender,
     messages: [
         {
-            "type": "template",
-            "altText": "this is a carousel template",
-            "template": {
-              "type": "carousel",
-              "columns": [
+            "type": "bubble",
+            "direction": "ltr",
+            "hero": {
+              "type": "image",
+              "url": "https://sv1.picz.in.th/images/2020/12/20/jrMAKf.jpg",
+              "align": "start",
+              "size": "full",
+              "aspectRatio": "20:13",
+              "aspectMode": "cover",
+              "backgroundColor": "#FFFFFFFF"
+            },
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "sm",
+              "contents": [
                 {
-                  "text": "กดเพื่อเลือก",
-                  "actions": [
-                    {
-                      "type": "message",
-                      "label": "สถานที่ท่องเที่ยว",
-                      "text": "เที่ยวไหนดี"
-                    },
-                    {
-                      "type": "message",
-                      "label": "ร้านอาหาร",
-                      "text": "ร้านไหนเด็ด"
-                    },
-                    {
-                      "type": "message",
-                      "label": "โรงแรงแรม, ที่พัก",
-                      "text": "ที่พักสบาย"
-                    }
-                  ]
+                  "type": "text",
+                  "text": "กดเพื่อเลือกที่คุณสนใจ",
+                  "weight": "bold",
+                  "size": "xl",
+                  "color": "#D8AAAAFF",
+                  "wrap": true,
+                  "contents": []
+                }
+              ]
+            },
+            "footer": {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "สถานที่ท่องเที่ยว",
+                    "text": "เที่ยวไหนดี"
+                  },
+                  "flex": 2,
+                  "color": "#9AD6D2FF",
+                  "margin": "xl",
+                  "style": "primary"
+                },
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "ร้านอาหาร",
+                    "text": "ร้านไหนเด็ด"
+                  },
+                  "color": "#9AD6D2FF",
+                  "margin": "xl",
+                  "style": "primary"
+                },
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "โรงแรม, ที่พัก",
+                    "text": "ที่พักสบาย"
+                  },
+                  "color": "#9AD6D2FF",
+                  "margin": "xl",
+                  "style": "primary"
                 }
               ]
             }
