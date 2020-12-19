@@ -55,30 +55,71 @@ function sendText (sender, text) {
     to: sender,
     messages: [
         {
-            "type": "template",
-            "altText": "this is a carousel template",
-            "template": {
-              "type": "carousel",
-              "columns": [
+            "type": "bubble",
+            "direction": "ltr",
+            "hero": {
+              "type": "image",
+              "url": "https://sv1.picz.in.th/images/2020/12/20/jrMAKf.jpg",
+              "align": "start",
+              "size": "full",
+              "aspectRatio": "20:13",
+              "aspectMode": "cover",
+              "backgroundColor": "#FFFFFFFF"
+            },
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "sm",
+              "contents": [
                 {
-                  "text": "กดเพื่อเลือก",
-                  "actions": [
-                    {
-                      "type": "message",
-                      "label": "สถานที่ท่องเที่ยว",
-                      "text": "เที่ยวไหนดี"
-                    },
-                    {
-                      "type": "message",
-                      "label": "ร้านอาหาร",
-                      "text": "ร้านไหนเด็ด"
-                    },
-                    {
-                      "type": "message",
-                      "label": "โรงแรงแรม, ที่พัก",
-                      "text": "ที่พักสบาย"
-                    }
-                  ]
+                  "type": "text",
+                  "text": "กดเพื่อเลือกที่คุณสนใจ",
+                  "weight": "bold",
+                  "size": "xl",
+                  "color": "#D8AAAAFF",
+                  "wrap": true,
+                  "contents": []
+                }
+              ]
+            },
+            "footer": {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "สถานที่ท่องเที่ยว",
+                    "text": "เที่ยวไหนดี"
+                  },
+                  "flex": 2,
+                  "color": "#9AD6D2FF",
+                  "margin": "xl",
+                  "style": "primary"
+                },
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "ร้านอาหาร",
+                    "text": "ร้านไหนเด็ด"
+                  },
+                  "color": "#9AD6D2FF",
+                  "margin": "xl",
+                  "style": "primary"
+                },
+                {
+                  "type": "button",
+                  "action": {
+                    "type": "message",
+                    "label": "โรงแรม, ที่พัก",
+                    "text": "ที่พักสบาย"
+                  },
+                  "color": "#9AD6D2FF",
+                  "margin": "xl",
+                  "style": "primary"
                 }
               ]
             }
