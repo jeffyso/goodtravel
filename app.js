@@ -67,8 +67,9 @@ function sendText (sender, text) {
                   "aspectMode": "cover",
                   "backgroundColor": "#FFFFFFFF"
                 },
+                
                 "footer": {
-                    "type": "box",
+                    "type": "template",
                     "layout": "vertical",
                     "spacing": "sm",
                     "contents": [
