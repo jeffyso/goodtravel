@@ -67,6 +67,23 @@ function sendText (sender, text) {
                   "aspectMode": "cover",
                   "backgroundColor": "#FFFFFFFF"
                 },
+
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "sm",
+                    "contents": [
+                        {
+                            "type": "text",
+                            "text": "กดเพื่อเลือกที่คุณสนใจ",
+                            "weight": "bold",
+                            "size": "xl",
+                            "color": "#D8AAAAFF",
+                            "wrap": true,
+                            "contents": []
+                          }
+                    ],
+
             "type": "template",
             "altText": "this is a carousel template",
             "template": {
