@@ -67,6 +67,47 @@ function sendText (sender, text) {
                   "aspectMode": "cover",
                   "backgroundColor": "#FFFFFFFF"
                 },
+                "footer": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "button",
+                        "action": {
+                          "type": "message",
+                          "label": "สถานที่ท่องเที่ยว",
+                          "text": "สถานที่ท่องเที่ยว"
+                        },
+                        "flex": 2,
+                        "color": "#41B9B0FF",
+                        "margin": "xl",
+                        "style": "primary"
+                      },
+                      {
+                        "type": "button",
+                        "action": {
+                          "type": "message",
+                          "label": "ร้านอาหาร",
+                          "text": "ร้านอาหาร"
+                        },
+                        "color": "#41B9B0FF",
+                        "margin": "xl",
+                        "style": "primary"
+                      },
+                      {
+                        "type": "button",
+                        "action": {
+                          "type": "message",
+                          "label": "โรงแรม, ที่พัก",
+                          "text": "โรงแรม, ที่พัก"
+                        },
+                        "color": "#41B9B0FF",
+                        "margin": "xl",
+                        "style": "primary"
+                      }
+                    ]
+                },
 
                 // "body": {
                 //     "type": "box",
@@ -84,33 +125,33 @@ function sendText (sender, text) {
                 //           }
                 //     ],
 
-            "type": "template",
-            "altText": "this is a carousel template",
-            "template": {
-              "type": "carousel",
-              "columns": [
-                {
-                  "text": "กดเพื่อเลือก",
-                  "actions": [
-                    {
-                      "type": "message",
-                      "label": "สถานที่ท่องเที่ยว",
-                      "text": "เที่ยวไหนดี"
-                    },
-                    {
-                      "type": "message",
-                      "label": "ร้านอาหาร",
-                      "text": "ร้านไหนเด็ด"
-                    },
-                    {
-                      "type": "message",
-                      "label": "โรงแรงแรม, ที่พัก",
-                      "text": "ที่พักสบาย"
-                    }
-                  ]
-                }
-              ]
-            }
+            // "type": "template",
+            // "altText": "this is a carousel template",
+            // "template": {
+            //   "type": "carousel",
+            //   "columns": [
+            //     {
+            //       "text": "กดเพื่อเลือก",
+            //       "actions": [
+            //         {
+            //           "type": "message",
+            //           "label": "สถานที่ท่องเที่ยว",
+            //           "text": "เที่ยวไหนดี"
+            //         },
+            //         {
+            //           "type": "message",
+            //           "label": "ร้านอาหาร",
+            //           "text": "ร้านไหนเด็ด"
+            //         },
+            //         {
+            //           "type": "message",
+            //           "label": "โรงแรงแรม, ที่พัก",
+            //           "text": "ที่พักสบาย"
+            //         }
+            //       ]
+            //     }
+            //   ]
+            // }
           }
     ]
   }
