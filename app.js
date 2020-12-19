@@ -27,30 +27,26 @@ function sendText (sender, text) {
   let data = {
     to: sender,
     messages: [
-      {
-        "type": "template",
-        "altText": "this is a carousel template",
-        "template": {
-          "type": "carousel",
-          "imageSize": "cover",
-          "imageAspectRatio": "square",
-          "columns": [
-            {
-              "title": "1",
-              "text": "Text",
-              "actions": [
+        {
+            "type": "template",
+            "altText": "this is a carousel template",
+            "template": {
+              "type": "carousel",
+              "columns": [
                 {
-                  "type": "message",
-                  "label": "View",
-                  "text": "View"
+                  "title": "Title",
+                  "text": "Text",
+                  "actions": [
+                    {
+                      "type": "message",
+                      "label": "Action 1",
+                      "text": "Action 1"
+                    }
+                  ]
                 }
-              ],
-              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
-              "imageBackgroundColor": "#E50000"
+              ]
             }
-          ]
-        }
-      }
+          }
     ]
   }
   request({
