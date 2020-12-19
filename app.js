@@ -18,6 +18,12 @@ app.post('/webhook', (req, res) => {
   if (text === 'สนใจ') {
     sendText(sender, text)
   }
+
+  if (text === 'น่ารักจุง'){
+    sendDetail(sender,text)
+  }
+
+
   res.sendStatus(200)
 })
 
@@ -130,6 +136,84 @@ function sendText (sender, text) {
   })
 }
 
+
+function sendDetail (sender, text) {
+
+
+    let data = {
+      to: sender,
+      messages: [
+          {
+              "type": "template",
+              "altText": "this is a carousel template",
+              "template": {
+                "type": "carousel",
+                "columns": [
+                  {
+                    "title": "Title",
+                    "text": "Text",
+                    "actions": [
+                      {
+                        "type": "message",
+                        "label": "Action 1",
+                        "text": "Action 1"
+                      }
+                    ]
+                  },
+                  {
+                      "title": "Title",
+                      "text": "Text",
+                      "actions": [
+                        {
+                          "type": "message",
+                          "label": "Action 1",
+                          "text": "Action 1"
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Title",
+                      "text": "Text",
+                      "actions": [
+                        {
+                          "type": "message",
+                          "label": "Action 1",
+                          "text": "Action 1"
+                        }
+                      ]
+                    },
+                    {
+                      "title": "Title",
+                      "text": "Text",
+                      "actions": [
+                        {
+                          "type": "message",
+                          "label": "Action 1",
+                          "text": "Action 1"
+                        }
+                      ]
+                    }
+                ]
+              }
+            }
+            
+      ]
+    }
+    request({
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer {gWY1qEsFDFXlNuG/aHbMdmDdM6SmZpsBaViQHTXvzxo/W70C+fQZsAhCeAMn39mN5H2tx8+6qLrVKoluYmktK/H8Ug9Mn8EooFIvi4NwUE/eg6ihvOl5rzIuMfFleKWAiAddjSN1s6FSKFeZfGXwTQdB04t89/1O/w1cDnyilFU=}'
+      },
+      url: 'https://api.line.me/v2/bot/message/push',
+      method: 'POST',
+      body: data,
+      json: true
+    }, function (err, res, body) {
+      if (err) console.log('error')
+      if (res) console.log('success')
+      if (body) console.log(body)
+    })
+  }
 app.listen(app.get('port'), function () {
   console.log('run at port', app.get('port'))
 })
