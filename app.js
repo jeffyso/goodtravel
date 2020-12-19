@@ -3,18 +3,15 @@ let bodyParser = require('body-parser')
 let request = require('request')
 let app = express()
 app.use(bodyParser.json())
-
 app.set('port', (process.env.PORT || 4000))
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
-
 app.post('/webhook', (req, res) => {
   let text = req.body.events[0].message.text
   let sender = req.body.events[0].source.userId
   let replyToken = req.body.events[0].replyToken
   console.log(text, sender, replyToken)
   console.log(typeof sender, typeof text)
-  // console.log(req.body.events[0])
   if (text === 'สนใจ') {
     sendText(sender, text)
   }
