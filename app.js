@@ -20,7 +20,7 @@ function reply(reply_token) {
         replyToken: reply_token,
         messages: [{
             type: 'text',
-            text: 'น่ารักอ่ะ'
+            text: 'น่ารักอ่ะจุง'
         },
         {
             type: 'text',
