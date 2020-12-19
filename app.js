@@ -9,7 +9,6 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 app.post('/webhook', (req, res) => {
-
   let text = req.body.events[0].message.text
   let sender = req.body.events[0].source.userId
   let replyToken = req.body.events[0].replyToken
@@ -90,25 +89,44 @@ function sendText (sender, text) {
             "longitude": 99.493267
           },
           {
-            "type": "imagemap",
-            "baseUrl": "https://drive.google.com/file/d/1RYzLuwe6NixDiaHBixkSRwI8v8bq2ogD/view?usp=sharing",
-            "altText": "This is an imagemap",
-            "baseSize": {
-              "width": 1040,
-              "height": 791
-            },
-            "actions": [
-              {
-                "type": "message",
-                "area": {
-                  "x": 122,
-                  "y": 80,
-                  "width": 845,
-                  "height": 628
-                },
-                "text": "Action 1"
-              }
-            ]
+            "type": "template",
+            "altText": "this is a carousel template",
+            "template": {
+              "type": "carousel",
+              "imageSize": "contain",
+              "columns": [
+                {
+                  "thumbnailImageUrl": "https://t3.gstatic.com/images?q=tbn:ANd9GcQ9HjTYO4Dzwf51uB65RIZ1jhy1PytLWRxeFLf19XvWdg_nwiuZsq1kT4FEFIRgh_1znFzXSijwTX2WrYRH2x_Ugw",
+                  "title": "วัดพระธาตุลำปางหลวง",
+                  "text": "Text",
+                  "actions": [
+                    {
+                      "type": "postback",
+                      "label": "รายละเอียด",
+                      "text": "รายละเอียด",
+                      "data": "ksdf;lksnflknsdlfknasldfknldskfasl;dfkn"
+                    }
+                  ],
+                  "imageBackgroundColor": "#FFFFFF"
+                }
+              ],
+              "columns": [
+                {
+                  "thumbnailImageUrl": "https://t3.gstatic.com/images?q=tbn:ANd9GcQ9HjTYO4Dzwf51uB65RIZ1jhy1PytLWRxeFLf19XvWdg_nwiuZsq1kT4FEFIRgh_1znFzXSijwTX2WrYRH2x_Ugw",
+                  "title": "วัดพระธาตุลำปางหลวง",
+                  "text": "Text",
+                  "actions": [
+                    {
+                      "type": "postback",
+                      "label": "รายละเอียด",
+                      "text": "รายละเอียด",
+                      "data": "ksdasdsad16516584614861knasldfknldskfasl;dfkn"
+                    }
+                  ],
+                  "imageBackgroundColor": "#FFFFFF"
+                }
+              ]
+            }
           }
           
     ]
