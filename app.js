@@ -86,7 +86,7 @@ function sendText (sender, text) {
             //   "type": "box",
             //   "layout": "vertical",
             //   "spacing": "sm",
-              "contents": [
+            //   "contents": [
                 {
                   "type": "button",
                   "action": {
@@ -121,7 +121,7 @@ function sendText (sender, text) {
                   "margin": "xl",
                   "style": "primary"
                 }
-              ]
+            //   ]
             // }
           }
     ]
