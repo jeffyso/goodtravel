@@ -28,9 +28,67 @@ function sendText (sender, text) {
     to: sender,
     messages: [
       {
-            "type": "sticker",
-            "packageId": "11537",
-            "stickerId": "52002735"
+        "type": "template",
+        "altText": "this is a carousel template",
+        "template": {
+          "type": "carousel",
+          "imageSize": "cover",
+          "imageAspectRatio": "square",
+          "columns": [
+            {
+              "title": "1",
+              "text": "Text",
+              "actions": [
+                {
+                  "type": "message",
+                  "label": "View",
+                  "text": "View"
+                }
+              ],
+              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
+              "imageBackgroundColor": "#E50000"
+            },
+            {
+              "title": "2",
+              "text": "Text",
+              "actions": [
+                {
+                  "type": "message",
+                  "label": "View",
+                  "text": "View"
+                }
+              ],
+              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
+              "imageBackgroundColor": "#137CF7"
+            },
+            {
+              "title": "3",
+              "text": "Text",
+              "actions": [
+                {
+                  "type": "message",
+                  "label": "View",
+                  "text": "View"
+                }
+              ],
+              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
+              "imageBackgroundColor": "#10D228"
+            },
+            {
+              "title": "4",
+              "text": "Text",
+              "actions": [
+                {
+                  "type": "message",
+                  "label": "View",
+                  "text": "View"
+                }
+              ],
+              "thumbnailImageUrl": "PROVIDE_URL_FROM_YOUR_SERVER",
+              "imageBackgroundColor": "#DB2020"
+            }
+          ]
+        }
       }
     ]
   }
