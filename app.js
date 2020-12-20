@@ -162,7 +162,7 @@ function sendRestaurant (sender, text) {
     let data = {
       to: sender,
       messages: [
-        {
+        {{
             "type": "carousel",
             "contents": [
               {
