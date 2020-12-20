@@ -101,7 +101,7 @@ function sendTravel (sender, text) {
       messages: [
 
 
-        ,{
+        {
             "type": "template",
             "altText": "this is a carousel template",
             "template": {
