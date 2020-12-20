@@ -28,22 +28,7 @@ app.post('/webhook', (req, res) => {
   console.log(text, sender, replyToken)
   console.log(typeof sender, typeof text)
   if (text === 'สนใจ') {
-    sendText(sender, text)
-  }
-  if (text === 'เที่ยวไหนดี'){
-    sendTravel(sender,text)
-  }
-  if (text === 'ร้านไหนเด็ด'){
-    sendRestaurant(sender,text)
-  }
-  if (text === 'ที่พักสบาย'){
-    sendHotel(sender,text)
-  }
-  res.sendStatus(200)
-})
-function sendText (sender, text) {
-
-
+    
   let data = {
     to: sender,
     messages: [
@@ -133,7 +118,113 @@ function sendText (sender, text) {
     if (res) console.log('success')
     if (body) console.log(body)
   })
-}
+  }
+
+  
+  if (text === 'เที่ยวไหนดี'){
+    sendTravel(sender,text)
+  }
+  if (text === 'ร้านไหนเด็ด'){
+    sendRestaurant(sender,text)
+  }
+  if (text === 'ที่พักสบาย'){
+    sendHotel(sender,text)
+  }
+  res.sendStatus(200)
+})
+// function sendText (sender, text) {
+
+
+//   let data = {
+//     to: sender,
+//     messages: [
+//         {
+//             "type": "bubble",
+//             "direction": "ltr",
+//             "hero": {
+//               "type": "image",
+//               "url": "https://sv1.picz.in.th/images/2020/12/20/jrMAKf.jpg",
+//               "align": "start",
+//               "size": "full",
+//               "aspectRatio": "20:13",
+//               "aspectMode": "cover",
+//               "backgroundColor": "#FFFFFFFF"
+//             },
+//             "body": {
+//               "type": "box",
+//               "layout": "vertical",
+//               "spacing": "sm",
+//               "contents": [
+//                 {
+//                   "type": "text",
+//                   "text": "กดเพื่อเลือกที่คุณสนใจ",
+//                   "weight": "bold",
+//                   "size": "xl",
+//                   "color": "#D8AAAAFF",
+//                   "wrap": true,
+//                   "contents": []
+//                 }
+//               ]
+//             },
+//             "footer": {
+//               "type": "box",
+//               "layout": "vertical",
+//               "spacing": "sm",
+//               "contents": [
+//                 {
+//                   "type": "button",
+//                   "action": {
+//                     "type": "message",
+//                     "label": "สถานที่ท่องเที่ยว",
+//                     "text": "สถานที่ท่องเที่ยว"
+//                   },
+//                   "flex": 2,
+//                   "color": "#41B9B0FF",
+//                   "margin": "xl",
+//                   "style": "primary"
+//                 },
+//                 {
+//                   "type": "button",
+//                   "action": {
+//                     "type": "message",
+//                     "label": "ร้านอาหาร",
+//                     "text": "ร้านอาหาร"
+//                   },
+//                   "color": "#41B9B0FF",
+//                   "margin": "xl",
+//                   "style": "primary"
+//                 },
+//                 {
+//                   "type": "button",
+//                   "action": {
+//                     "type": "message",
+//                     "label": "โรงแรม, ที่พัก",
+//                     "text": "โรงแรม, ที่พัก"
+//                   },
+//                   "color": "#41B9B0FF",
+//                   "margin": "xl",
+//                   "style": "primary"
+//                 }
+//               ]
+//             }
+//           }
+//     ]
+//   }
+//   request({
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Authorization': 'Bearer {gWY1qEsFDFXlNuG/aHbMdmDdM6SmZpsBaViQHTXvzxo/W70C+fQZsAhCeAMn39mN5H2tx8+6qLrVKoluYmktK/H8Ug9Mn8EooFIvi4NwUE/eg6ihvOl5rzIuMfFleKWAiAddjSN1s6FSKFeZfGXwTQdB04t89/1O/w1cDnyilFU=}'
+//     },
+//     url: 'https://api.line.me/v2/bot/message/push',
+//     method: 'POST',
+//     body: data,
+//     json: true
+//   }, function (err, res, body) {
+//     if (err) console.log('error')
+//     if (res) console.log('success')
+//     if (body) console.log(body)
+//   })
+// }
 function sendTravel (sender, text) {
 
 
