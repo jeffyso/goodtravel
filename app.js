@@ -163,49 +163,183 @@ function sendRestaurant (sender, text) {
       to: sender,
       messages: [
         {
-            "type": "template",
-            "altText": "this is a carousel template",
-            "template": {
-              "type": "carousel",
-              "columns": [
-                {
-                  "thumbnailImageUrl": "https://ed.edtfiles-media.com/static-cache/resize-cache/790x528/ud/images/1/90/267639/LUM_3659.jpg",
-                  "title": "ร้านเสบียง",
-                  "text": "ร้านอาหารบรรยากาศสบายๆ ตั้งอยู่ติดกับแม่น้ำวัง",
-                  "actions": [
+            "type": "carousel",
+            "contents": [
+              {
+                "type": "bubble",
+                "hero": {
+                  "type": "image",
+                  "url": "https://ed.edtfiles-media.com/static-cache/resize-cache/790x528/ud/images/1/90/267639/LUM_3659.jpg",
+                  "size": "full",
+                  "aspectRatio": "20:13",
+                  "aspectMode": "cover"
+                },
+                "body": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
                     {
-                      "type": "uri",
-                      "label": "รายละเอียด",
-                      "uri": "http://www.edtguide.com/eat/267639/sabiang-restaurant"
+                      "type": "text",
+                      "text": "ร้านเสบียง",
+                      "weight": "bold",
+                      "size": "xl",
+                      "color": "#D8AAAAFF",
+                      "wrap": true,
+                      "contents": []
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "ร้านอาหารบรรยากาศสบายๆ ตั้งอยู่ติดกับแม่น้ำวัง",
+                          "weight": "regular",
+                          "size": "md",
+                          "flex": 0,
+                          "wrap": true,
+                          "contents": []
+                        }
+                      ]
                     }
                   ]
                 },
-                {
-                  "thumbnailImageUrl": "https://www.thainorthtour.com/img/upload/city-573c192f65400.JPG",
-                  "title": "ร้านอร่อยบาทเดียว",
-                  "text": "ร้านข้าวต้มอร่อยบาทเดียว อร่อยถูกปาก ราคาถูกใจ อาหารหลากหลาย",
-                  "actions": [
+                "footer": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
                     {
-                      "type": "uri",
-                      "label": "รายละเอียด",
-                      "uri": "https://www.thainorthtour.com/place_detail.php?id=1275"
-                    }
-                  ]
-                },
-                {
-                  "thumbnailImageUrl": "https://www.thainorthtour.com/img/upload/city-573d50b38d9a0.JPG",
-                  "title": "ร้านครัวมุกดา",
-                  "text": "เมนูแนะนำประจำร้านคือ ปากหม้อญวน ปอเปี๊ยะญวนทอด ",
-                  "actions": [
-                    {
-                      "type": "uri",
-                      "label": "รายละเอียด",
-                      "uri": "https://www.thainorthtour.com/place_detail.php?id=1289"
+                      "type": "button",
+                      "action": {
+                        "type": "uri",
+                        "label": "รายละเอียด",
+                        "uri": "http://www.edtguide.com/eat/267639/sabiang-restaurant"
+                      },
+                      "color": "#41B9B0FF",
+                      "style": "primary"
                     }
                   ]
                 }
-              ]
-            }
+              },
+              {
+                "type": "bubble",
+                "hero": {
+                  "type": "image",
+                  "url": "https://www.thainorthtour.com/img/upload/city-573c192f65400.JPG",
+                  "size": "full",
+                  "aspectRatio": "20:13",
+                  "aspectMode": "cover"
+                },
+                "body": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "ร้านอร่อยบาทเดียว",
+                      "weight": "bold",
+                      "size": "xl",
+                      "color": "#D8AAAAFF",
+                      "wrap": true,
+                      "contents": []
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "ร้านข้าวต้มอร่อยบาทเดียว อร่อยถูกปาก ราคาถูกใจ อาหารหลากหลาย",
+                          "weight": "regular",
+                          "size": "md",
+                          "flex": 0,
+                          "wrap": true,
+                          "contents": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "footer": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "action": {
+                        "type": "uri",
+                        "label": "รายละเอียด",
+                        "uri": "https://www.thainorthtour.com/place_detail.php?id=1275"
+                      },
+                      "color": "#41B9B0FF",
+                      "style": "primary"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "bubble",
+                "hero": {
+                  "type": "image",
+                  "url": "https://www.thainorthtour.com/img/upload/city-573d50b38d9a0.JPG",
+                  "size": "full",
+                  "aspectRatio": "20:13",
+                  "aspectMode": "cover"
+                },
+                "body": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "ร้านครัวมุกดา",
+                      "weight": "bold",
+                      "size": "xl",
+                      "color": "#D8AAAAFF",
+                      "wrap": true,
+                      "contents": []
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "เมนูแนะนำประจำร้านคือ ปากหม้อญวน ปอเปี๊ยะญวนทอด ",
+                          "weight": "regular",
+                          "size": "md",
+                          "flex": 0,
+                          "wrap": true,
+                          "contents": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "footer": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "button",
+                      "action": {
+                        "type": "uri",
+                        "label": "รายละเอียด",
+                        "uri": "https://www.thainorthtour.com/place_detail.php?id=1289"
+                      },
+                      "color": "#41B9B0FF",
+                      "style": "primary"
+                    }
+                  ]
+                }
+              }
+            ]
           }
             
       ]
