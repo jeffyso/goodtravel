@@ -4,33 +4,18 @@ let request = require('request')
 let app = express()
 
 
-const functions = require("firebase-functions");
-const request = require("request-promise");
+// const functions = require("firebase-functions");
+// const request = require("request-promise");
 
 // const LINE_MESSAGING_API = "https://api.line.me/v2/bot/message";
 // const LINE_HEADER = {
 //   "Content-Type": "application/json",
-//   "Authorization": "Bearer <gWY1qEsFDFXlNuG/aHbMdmDdM6SmZpsBaViQHTXvzxo/W70C+fQZsAhCeAMn39mN5H2tx8+6qLrVKoluYmktK/H8Ug9Mn8EooFIvi4NwUE/eg6ihvOl5rzIuMfFleKWAiAddjSN1s6FSKFeZfGXwTQdB04t89/1O/w1cDnyilFU=>"
+//   "Authorization": "Bearer <CHANNEL-ACCESS-TOKEN>"
 // };
+
 // exports.AdvanceMessage = functions.https.onRequest((req, res) => {
-//     return request({
-//       method: "POST",
-//       uri: `${LINE_MESSAGING_API}/push`,
-//       headers: LINE_HEADER,
-//       body: JSON.stringify({
-//         to: "<USER-ID>",
-//         messages: [
-//           {
-//             type:"text",
-//           }
-//         ]
-//       })
-//     }).then(() => {
-//         return res.status(200).send("Done");
-//     }).catch(error => {
-//         return Promise.reject(error);
-//     });
-//   });
+    
+// })
 
 app.use(bodyParser.json())
 app.set('port', (process.env.PORT || 4000))
@@ -57,6 +42,8 @@ app.post('/webhook', (req, res) => {
   res.sendStatus(200)
 })
 function sendText (sender, text) {
+
+
   let data = {
     to: sender,
     messages: [
